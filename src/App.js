@@ -58,7 +58,7 @@ function App() {
                 className="btn btn-block add-todo-btn"
                 onClick={handleAddTodo}
               >
-                Add Todo
+                ADD TODO
               </Button>
             </div>
           </div>
@@ -74,13 +74,13 @@ function App() {
                 className="ms-3 clear-comp-btn"
                 onClick={handleClearTodos}
               >
-                Clear Complete
+                CLEAR COMPLETE
               </Button>
               <Button
                 className="ms-3 clear-all-btn"
                 onClick={handleClearAllTodos}
               >
-                Clear All
+                CLEAR ALL
               </Button>
             </div>
           </div>
