@@ -8,6 +8,8 @@ const LOCAL_STORAGE_KEY = 'todoApp.todos';
 function App() {
   const [todos, setTodos] = useState([]);
   const todoNameRef = useRef();
+  const [isEnlarged, setEnlarge] = useState("false");
+
 
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
@@ -19,6 +21,10 @@ function App() {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
+
+  function enlargeTodo() {
+    setEnlarge(!isEnlarged);
+  }
 
   function toggleTodo(id) {
     const newTodos = [...todos];
@@ -86,7 +92,7 @@ function App() {
           </div>
         </div>
 
-        <div className="todo-list-wrapper mt-3">
+        <div className="todo-list-wrapper mt-3" /*{isEnlarged ? 'enlarge' : null}*/ onClick={enlargeTodo}>
           <TodoList className="todos" todos={todos} toggleTodo={toggleTodo} />
         </div>
       </div>
