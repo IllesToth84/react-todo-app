@@ -86,7 +86,7 @@ function App() {
           </div>
         </div>
 
-        <div className="todo-list-wrapper mt-5">
+        <div className="todo-list-wrapper mt-3">
           <TodoList className="todos" todos={todos} toggleTodo={toggleTodo} />
         </div>
       </div>

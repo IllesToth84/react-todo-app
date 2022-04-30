@@ -28,12 +28,12 @@ body {
         width: 40%;
 
         @media screen and (max-width: $tablet) {
-            grid-template-rows: 45% 55%;
+            grid-template-rows: 1fr 1fr;
             width: 80%;
         }
 
         @media screen and (max-width: $mobile) {
-            grid-template-rows: 60% 40%;
+            grid-template-rows: 55% 45%;
             width: 90%;
         }
 
@@ -43,7 +43,7 @@ body {
             justify-content: flex-end;
 
             .add-todo {
-                margin-bottom: 5em;
+                margin-bottom: 4.5em;
 
                 h1 {
                     font-size: 5rem;
